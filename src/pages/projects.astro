@@ -5,47 +5,73 @@ import HorizontalCard from "../components/HorizontalCard.astro";
 
 <BaseLayout title = "Projects" sideBarActiveItemID="projects">
   <div>
-    <div class="text-3xl w-full font-bold mb-5">Projects Header</div>
+    <div class="text-3xl w-full font-bold mb-5">Machine Learning Projects</div>
   </div>
 
   <HorizontalCard
-    title="Demo Project 1"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="NEW"
+    title="Machine Learning for the Best NHL Pool"
+    img="/NHL_pool.png"
+    desc="The project involved extracting and preprocessing NHL player data using their API, predicting current season points with machine learning models, and building the optimal team using a Branch-and-Bound algorithm."
+    url="https://github.com/Guigui031/Machine-Learning-for-the-Best-NHL-Pool"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
-    title="Demo Project 2"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
+    title="Metadata curation to evaluate the use of LLMs in the context of a systematic review"
+    img="/ProjetCurationMetadonnees.png"
+    desc="This project is about collecting metadata from articles in systematic reviews to create clean datasets. The developped program performs automatic data cleaning, definition, and alignment for all these articles. The datasets are used by a Mila-affiliated M.Sc. student to evaluate the use of LLMs in the screening phase of systematic review."
+    url="https://github.com/geodes-sms/IFT3150-ProjetCurationMetadonnees"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Kaggle Competition on Text Classification"
+    img="/KaggleCompetition.svg"
+    desc="Not knowing the context and only having a Bag-of-Words matrix, we needed to predict the binary labels of new documents. We developped a small architecture to organize our submissions and our best model was an Ensemble Learning Classifier using a Naïve Bayes Classifier, an XGBoost Classifier and a SVM Classifier."
+    url="https://github.com/KamenDamov/kaggle_competition"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Benchmarking NLP Model Performances"
+    img="/NLP_Benchmark.png"
+    desc="This project evaluates and compares various text classification systems capable of identifying paraphrases between sentences, testing the robustness of the models on the QQP and MRPC datasets from the GLUE corpus. Furthermore, the project explores whether biased training can lead to biased performance and experiments with different encoders to identify the most performant and generalizable ones."
+    url="https://github.com/Guigui031/Benchmarking-NLP-Model-Performances"
   />
 
   <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Projects Header</div>
+    <div class="text-3xl w-full font-bold mb-5 mt-10">Miscellaneous Projects</div>
   </div>
 
   <HorizontalCard
-    title="Demo Project 3"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="FOSS"
+    title="Automatic Detection of Incoming Cars in a Parking Lot"
+    img="/AuxVoletsNoirs_entree.png"
+    desc="Physical Arduino system with an ultrasonic sensor that sends mobile notifications using Telegram when a car passes by. The operational system will be deployed next summer at the Aux Volets Noirs vineyard."
+    url="https://github.com/Guigui031/CarEnteringParkingDetectionSystem"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
-    title="Demo Project 4"
+    title="Design and Development of a Website in HTML5"
     img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    desc="Redesigning the Aux Volets Noirs vineyard website using HTML5, CSS, and Bootstrap to gain experience on these technologies while working on giving the best user experience."
     url="#"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
-    title="Demo Project 5"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
+    title="Development of a Mobile Game with the Godot Game Engine"
+    img="/PewPewPew.png"
+    desc="Developing a mobile game using the Godot Engine named PewPewPew: a top-down shooter where players survive against hordes of zombies."
+    url="https://github.com/Guigui031/PewPewPew-an-Android-Game"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Development of a Discord Bot in JavaScript"
+    img="/AmongUsDiscordBot.png"
+    desc="Developing a Discord bot in JavaScript for Among Us, automating player muting and channel switching to let dead players communicate while listening to the alive ones."
+    url="https://github.com/Guigui031/Among-Us-Discord-Bot"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Development of a Personal Game in Python"
+    img="/PygamePlatformer.png"
+    desc="Developing a personal game in Python using the Pygame library: a 2D platformer where players gain additional powers each level."
+    url="https://github.com/Guigui031/Platformer-Using-Pygame"
   />
 </BaseLayout>
