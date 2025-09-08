@@ -1,21 +1,26 @@
 ---
+import { getLangFromUrl, useTranslations, localizeUrl } from '../i18n/utils';
+
 const { sideBarActiveItemID } = Astro.props;
 const activeClass = "bg-base-300"; // For primary color replace with `active` class
+
+const currentLang = getLangFromUrl(Astro.url);
+const t = useTranslations(currentLang);
 ---
 
 <ul class="menu grow shrink menu-md overflow-y-auto">
-    <li><a class="py-3 text-base" id="home" href="/">Home</a></li>
-    <li><a class="py-3 text-base" id="projects" href="/projects">Projects</a></li>
-    <!--<li><a class="py-3 text-base" id="services" href="/services">Services</a></li>-->
-    <!--<li><a class="py-3 text-base" id="store" href="/store">Store</a></li>-->
-    <!--<li><a class="py-3 text-base" id="blog" href="/blog/">Blog</a></li>-->
-    <li><a class="py-3 text-base" id="cv" href="/cv">CV</a></li>
+    <li><a class="py-3 text-base" id="home" href={localizeUrl("/", currentLang)}>{t('nav.home')}</a></li>
+    <li><a class="py-3 text-base" id="projects" href={localizeUrl("/projects", currentLang)}>{t('nav.projects')}</a></li>
+    <!--<li><a class="py-3 text-base" id="services" href={localizeUrl("/services", currentLang)}>{t('nav.services')}</a></li>-->
+    <!--<li><a class="py-3 text-base" id="store" href={localizeUrl("/store", currentLang)}>{t('nav.store')}</a></li>-->
+    <!--<li><a class="py-3 text-base" id="blog" href={localizeUrl("/blog/", currentLang)}>{t('nav.blog')}</a></li>-->
+    <li><a class="py-3 text-base" id="cv" href={localizeUrl("/cv", currentLang)}>{t('nav.cv')}</a></li>
     <li>
         <a
             class="py-3 text-base"
             href="mailto:guillaume.genois@umontreal.ca"
             target="_blank"
-            referrerpolicy="no-referrer-when-downgrade">Contact</a
+            referrerpolicy="no-referrer-when-downgrade">{t('nav.contact')}</a
         >
     </li>
 </ul>

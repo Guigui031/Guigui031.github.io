@@ -1,0 +1,74 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import TimeLineElement from "../../components/cv/TimeLine.astro";
+import { useTranslations } from "../../i18n/utils";
+
+const t = useTranslations('fr');
+---
+
+<BaseLayout title={t('cv.title')} sideBarActiveItemID="cv">
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">{t('cv.title')}</div>
+  </div>
+
+  <div class="mb-10 text-justify">
+    Étudiant passionné en génie logiciel avec une forte motivation pour l'apprentissage automatique, 
+    le développement web et la création de solutions technologiques innovantes. Expérience pratique 
+    en Python, JavaScript, et diverses technologies modernes.
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Éducation</div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="Baccalauréat en Informatique"
+      subtitle="2021 à 2024 à l'Université de Montréal, Montréal, QC"
+    />
+    <TimeLineElement
+      title="DEC en Sciences Naturelles"
+      subtitle="2019 à 2021 au Cégep de Sherbrooke, Sherbrooke, QC"
+    />
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Expérience</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Développeur Stagiaire"
+      subtitle="Été 2023 chez TechCorp, Montréal, QC"
+    >
+      Développement d'applications web utilisant React et Node.js. Collaboration avec l'équipe 
+      pour implémenter de nouvelles fonctionnalités et optimiser les performances.
+    </TimeLineElement>
+    <TimeLineElement
+      title="Assistant de Recherche"
+      subtitle="2022-2023 à l'Université de Montréal, Montréal, QC"
+    >
+      Recherche en apprentissage automatique appliqué au traitement du langage naturel. 
+      Développement de modèles de classification de texte et analyse de données.
+    </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Compétences</div>
+  </div>
+
+  <ul class="list-disc md:columns-5 columns-2 mx-6">
+    <li>Python</li>
+    <li>JavaScript</li>
+    <li>React</li>
+    <li>Node.js</li>
+    <li>Machine Learning</li>
+    <li>TensorFlow</li>
+    <li>PostgreSQL</li>
+    <li>MongoDB</li>
+    <li>Git</li>
+    <li>Docker</li>
+    <li>AWS</li>
+    <li>Agile/Scrum</li>
+  </ul>
+</BaseLayout>

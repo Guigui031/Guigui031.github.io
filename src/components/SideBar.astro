@@ -2,6 +2,7 @@
 import SideBarFooter from "./SideBarFooter.astro";
 import { Image } from "astro:assets";
 import SideBarMenu from "./SideBarMenu.astro";
+import LanguageSwitcher from "./LanguageSwitcher.astro";
 const { sideBarActiveItemID } = Astro.props;
 ---
 
@@ -21,6 +22,11 @@ const { sideBarActiveItemID } = Astro.props;
     <div class="text-1xl text-center font-bold">B.Sc. Student in C.S.</div>
     <div class="text-1xl text-center font-bold">Université de Montréal</div>
     <div class="text-1xl text-center font-bold"></div>
+    
+    <div class="flex justify-center mt-4 mb-2">
+      <LanguageSwitcher />
+    </div>
+    
     <SideBarMenu sideBarActiveItemID={sideBarActiveItemID} />
     <SideBarFooter />
   </aside>
