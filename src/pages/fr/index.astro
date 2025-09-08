@@ -16,61 +16,31 @@ const projects = (await getCollection("projects"))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
   .slice(0, 3);
 ---
-
-<BaseLayout sideBarActiveItemID="home" title={t('site.title')} description={t('site.description')}>
+<BaseLayout sideBarActiveItemID="home">
   <div class="pb-12 mt-5">
-    <div class="text-xl py-1">{t('hero.subtitle')}</div>
-    <div class="text-5xl font-bold">Guillaume Genois</div>
-    <div class="text-3xl py-3 font-bold">Software Engineer</div>
+    <div class="text-5xl font-bold">About Me</div>
+    <div class="text-3xl py-3 font-bold">Computer Science Student and AI Enthusiast</div>
     <div class="py-2">
       <text class="text-lg">
-        {t('hero.description')}
+        Je suis un étudiant de premier cycle en mathématiques et informatique à l'Université de Montréal, 
+        avec une spécialisation en science des données. Mes intérêts de recherche tournent autour de 
+        l'apprentissage par renforcement, de l'inférence causale en apprentissage automatique, et de la 
+        prise de décision pilotée par l'IA. Je suis particulièrement attiré par les projets qui combinent 
+        une méthodologie rigoureuse avec des applications concrètes, dans le but de créer des solutions 
+        qui s'attaquent à des défis sociétaux tangibles.
+        <br><br>
+        En dehors de mon travail académique, j'aime jouer au badminton, ce qui m'aide à rester actif 
+        et équilibré. Ce sport m'a enseigné l'importance de la stratégie, de la concentration et de la 
+        collaboration — des qualités que je transpose dans mes études et mes recherches.
+        <br><br>
+        Sur le plan professionnel, je travaille actuellement comme conseiller en ingénierie de données 
+        chez Desjardins, où j'applique mes compétences techniques à des défis concrets. Cette expérience 
+        m'a permis de travailler sur des ensembles de données à grande échelle, de développer des outils 
+        automatisés, et de contribuer à des projets qui améliorent le traitement et l'analyse des données. 
+        Cela a davantage renforcé mes compétences en ingénierie de données tout en me fournissant de 
+        précieuses perspectives industrielles. J'ai hâte de poursuivre mon parcours tant dans le milieu 
+        académique que dans l'industrie, en tirant parti de mes compétences pour avoir un impact significatif.
       </text>
     </div>
-    <div class="mt-8">
-      <a class="btn" href="https://twitter.com/manuelernestog" target="_blank"> Twitter</a>
-      <a href="https://github.com/manuelernestog" target="_blank" class="btn btn-outline ml-5"> 
-        GitHub
-      </a>
-    </div>
   </div>
-
-  <div>
-    <div class="text-3xl w-full font-bold mb-2">{t('blog.title')} {"</>"}</div>
-  </div>
-
-  {
-    posts.map((post) => (
-      <>
-        <HorizontalCard
-          title={post.data.title}
-          img={post.data.heroImage}
-          desc={post.data.description}
-          url={"/fr/blog/" + post.slug.replace('fr/', '')}
-          target="_self"
-          badge={post.data.badge}
-        />
-        <div class="divider my-0"></div>
-      </>
-    ))
-  }
-
-  <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">{t('projects.title')} {"</>"}</div>
-  </div>
-
-  {
-    projects.map((project) => (
-      <>
-        <HorizontalCard
-          title={project.data.title}
-          img={project.data.heroImage}
-          desc={project.data.description}
-          url={project.slug.startsWith('fr/') ? "/fr/projects/" + project.slug.replace('fr/', '') : "/fr/projects/" + project.slug}
-          badge={project.data.badge}
-        />
-        <div class="divider my-0"></div>
-      </>
-    ))
-  }
 </BaseLayout>
