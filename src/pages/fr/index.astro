@@ -2,36 +2,82 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import HorizontalCard from "../../components/HorizontalCard.astro";
 import { getCollection } from "astro:content";
-import { useTranslations } from "../../i18n/utils";
+import createSlug from "../../lib/createSlug"
+import { getLangFromUrl, useTranslations, localizeUrl } from "../../i18n/utils";
 
-const t = useTranslations('fr');
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
+const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const last_posts = posts.slice(0, 3);
 ---
-<BaseLayout sideBarActiveItemID={t("nav.home")}>
+
+<BaseLayout sideBarActiveItemID={t('nav.home')}>
   <div class="pb-12 mt-5">
-    <div class="text-5xl font-bold">About Me</div>
-    <div class="text-3xl py-3 font-bold">Computer Science Student and AI Enthusiast</div>
+    <div class="text-5xl font-bold">{t('home.aboutMe')}</div>
+    <div class="text-3xl py-3 font-bold">{t('home.subtitle')}</div>
     <div class="py-2">
       <text class="text-lg">
-        Je suis un étudiant de premier cycle en mathématiques et informatique à l'Université de Montréal, 
-        avec une spécialisation en science des données. Mes intérêts de recherche tournent autour de 
-        l'apprentissage par renforcement, de l'inférence causale en apprentissage automatique, et de la 
-        prise de décision pilotée par l'IA. Je suis particulièrement attiré par les projets qui combinent 
-        une méthodologie rigoureuse avec des applications concrètes, dans le but de créer des solutions 
-        qui s'attaquent à des défis sociétaux tangibles.
+        {t('home.description')}
         <br><br>
-        En dehors de mon travail académique, j'aime jouer au badminton, ce qui m'aide à rester actif 
-        et équilibré. Ce sport m'a enseigné l'importance de la stratégie, de la concentration et de la 
-        collaboration — des qualités que je transpose dans mes études et mes recherches.
+        {t('home.description2')}
         <br><br>
-        Sur le plan professionnel, je travaille actuellement comme conseiller en ingénierie de données 
-        chez Desjardins, où j'applique mes compétences techniques à des défis concrets. Cette expérience 
-        m'a permis de travailler sur des ensembles de données à grande échelle, de développer des outils 
-        automatisés, et de contribuer à des projets qui améliorent le traitement et l'analyse des données. 
-        Cela a davantage renforcé mes compétences en ingénierie de données tout en me fournissant de 
-        précieuses perspectives industrielles. J'ai hâte de poursuivre mon parcours tant dans le milieu 
-        académique que dans l'industrie, en tirant parti de mes compétences pour avoir un impact significatif.
+        {t('home.description3')}
       </text>
     </div>
+    <div class="mt-8">
+      <a class="btn btn-primary" href={localizeUrl('/cv', lang)}>{t('home.viewCV')}</a>
+      <a href={localizeUrl('/projects', lang)} class="btn btn-outline ml-5">
+        {t('home.exploreProjects')}
+      </a>
+    </div>
   </div>
+
+  <!--<div>-->
+  <!--  <div class="text-3xl w-full font-bold mb-2">My last projects {"</>"}</div>-->
+  <!--</div>-->
+
+  <!--<HorizontalCard-->
+  <!--  title="Demo Project 1"-->
+  <!--  img="/post_img.webp"-->
+  <!--  desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."-->
+  <!--  url="#"-->
+  <!--  badge="NEW"-->
+  <!--/>-->
+  <!--<div class="divider my-0"></div>-->
+  <!--<HorizontalCard-->
+  <!--  title="Demo Project 2"-->
+  <!--  img="/post_img.webp"-->
+  <!--  desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."-->
+  <!--  url="#"-->
+  <!--/>-->
+  <!--<div class="divider my-0"></div>-->
+  <!--<HorizontalCard-->
+  <!--  title="Demo Project 3"-->
+  <!--  img="/post_img.webp"-->
+  <!--  desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."-->
+  <!--  url="#"-->
+  <!--  badge="FOSS"-->
+  <!--/>-->
+
+  <!--<div>-->
+  <!--  <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>-->
+  <!--</div>-->
+
+  <!--{-->
+  <!--  last_posts.map((post) => (-->
+  <!--    <>-->
+  <!--      <HorizontalCard-->
+  <!--        title={post.data.title}-->
+  <!--        img={post.data.heroImage}-->
+  <!--        desc={post.data.description}-->
+  <!--        url={"/blog/" + createSlug(post.data.title, post.slug)}-->
+  <!--        target="_self"-->
+  <!--        badge={post.data.badge}-->
+  <!--      />-->
+  <!--      <div class="divider my-0" />-->
+  <!--    </>-->
+  <!--  ))-->
+  <!--}-->
 </BaseLayout>

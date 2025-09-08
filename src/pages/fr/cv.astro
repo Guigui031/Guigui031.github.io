@@ -1,73 +1,69 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import TimeLineElement from "../../components/cv/TimeLine.astro";
-import { useTranslations } from "../../i18n/utils";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 
-const t = useTranslations('fr');
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
-<BaseLayout title={t('cv.title')} sideBarActiveItemID="cv">
+<BaseLayout title={t('cv.title')} sideBarActiveItemID={t('nav.cv')}>
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Profil</div>
+    <div class="text-3xl w-full font-bold">{t('cv.profile')}</div>
   </div>
 
-  <div class="mb-10 text-justify">
-    Téléchargez mon CV ici en <u><a href="/CV - Guillaume Genois - english.pdf" target="_blank" data-astro-reload>anglais</a></u> ou en <u><a href="/CV - Guillaume Genois - francais.pdf" target="_blank" data-astro-reload>français</a></u>.
+  <div class="mb-10 text-justify" set:html={t('cv.download')}>
   </div>
 
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Formation</div>
+    <div class="text-3xl w-full font-bold">{t('cv.education')}</div>
   </div>
 
   <div class="time-line-container grid gap-4 mb-10">
     <TimeLineElement
-      title="Baccalauréat en Mathématiques et Informatique"
-      subtitle="2022 à 2025 à l'Université de Montréal, Montréal, Canada"
-    >Spécialisation en Science des Données
+      title={t('cv.education1.title')}
+      subtitle={t('cv.education1.subtitle')}
+    >{t('cv.education1.description')}
     </TimeLineElement>
     <TimeLineElement
-      title="Diplôme d'études collégiales (DEC) en Sciences de la nature"
-      subtitle="2020 à 2022 au Cégep André-Laurendeau, Montréal, Canada"
-    >Cote R globale : 91%
+      title={t('cv.education2.title')}
+      subtitle={t('cv.education2.subtitle')}
+    >{t('cv.education2.description')}
     </TimeLineElement>
     <TimeLineElement
-      title="Diplôme d'études secondaires"
-      subtitle="2015 à 2020 au Collège de Montréal, Montréal, Canada"
-    >Récipiendaire de prix d'excellence académique
+      title={t('cv.education3.title')}
+      subtitle={t('cv.education3.subtitle')}
+    >{t('cv.education3.description')}
     </TimeLineElement>
   </div>
 
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Expérience</div>
+    <div class="text-3xl w-full font-bold">{t('cv.experience')}</div>
   </div>
 
   <div class="time-line-container mb-10">
     <TimeLineElement
-      title="Conseiller en ingénierie de données (Développeur)"
-      subtitle="De mai 2024 à aujourd'hui chez Desjardins, Montréal, Canada"
-    > Développé un outil pour extraire les champs utilisés et leurs sources à partir de requêtes SQL et SAS afin d'automatiser les analyses d'impact et la traçabilité des données. <br>
-      Contribué au développement d'un modèle multidimensionnel en Intégration Continue/Déploiement Continu (CI/CD). <br>
-      Acquis de l'expérience en travaillant en mode Agile au sein d'une grande organisation, nécessitant un développement rigoureux, une communication d'équipe efficace et une documentation continue.
-    </TimeLineElement>
-    <TimeLineElement
-      title="Étudiant pilote de systèmes (Développeur)"
-      subtitle="De mai 2023 à avril 2024 à l'Office québécois de la langue française, Montréal, Canada"
-    > Géré de manière autonome des mandats de développement récurrents et spéciaux.<br>
-      Extrait et analysé des données en utilisant la programmation SQL pour produire des rapports de reddition de comptes et répondre aux demandes internes et médiatiques.<br>
-      Appris rapidement de nouveaux logiciels, notamment Microsoft Access, Microsoft Power BI et des outils internes.<br>
-    </TimeLineElement>
-    <TimeLineElement
-      title="Entraîneur et animateur de badminton"
-      subtitle="De 2020 à 2023 au Club de badminton Lachine, Lachine, Canada"
+      title={t('cv.experience1.title')}
+      subtitle={t('cv.experience1.subtitle')}
     >
-      Planifié et exécuté des sessions d'entraînement en coordination avec les entraîneurs adjoints.<br>
-      Établi des objectifs globaux et personnels à long terme pour la progression des joueurs.<br>
-      Simplifié et présenté des concepts de base et avancés à des groupes de 20 joueurs.<br>
+      <div set:html={t('cv.experience1.description')}></div>
+    </TimeLineElement>
+    <TimeLineElement
+      title={t('cv.experience2.title')}
+      subtitle={t('cv.experience2.subtitle')}
+    >
+      <div set:html={t('cv.experience2.description')}></div>
+    </TimeLineElement>
+    <TimeLineElement
+      title={t('cv.experience3.title')}
+      subtitle={t('cv.experience3.subtitle')}
+    >
+      <div set:html={t('cv.experience3.description')}></div>
     </TimeLineElement>
   </div>
 
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Compétences</div>
+    <div class="text-3xl w-full font-bold">{t('cv.skills')}</div>
   </div>
 
   <ul class="list-disc md:columns-5 columns-2 mx-6">

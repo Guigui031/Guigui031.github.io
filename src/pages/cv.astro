@@ -1,65 +1,64 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import TimeLineElement from "../components/cv/TimeLine.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
-<BaseLayout title="Resume" sideBarActiveItemID="cv">
+<BaseLayout title={t('cv.title')} sideBarActiveItemID={t('nav.cv')}>
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Profile</div>
+    <div class="text-3xl w-full font-bold">{t('cv.profile')}</div>
   </div>
 
-  <div class="mb-10 text-justify">
-    Download my CV here in <u><a href="/CV - Guillaume Genois - english.pdf" target="_blank" data-astro-reload>english</a></u> or in <u><a href="/CV - Guillaume Genois - francais.pdf" target="_blank" data-astro-reload>french</a></u>.
+  <div class="mb-10 text-justify" set:html={t('cv.download')}>
   </div>
 
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Education</div>
+    <div class="text-3xl w-full font-bold">{t('cv.education')}</div>
   </div>
 
   <div class="time-line-container grid gap-4 mb-10">
     <TimeLineElement
-      title="Bachelor’s Degree in Mathematics and Computer Science"
-      subtitle="2022 to 2025 at Université de Montréal, Montréal, Canada"
-    >Specialization in Data Science
+      title={t('cv.education1.title')}
+      subtitle={t('cv.education1.subtitle')}
+    >{t('cv.education1.description')}
     </TimeLineElement>
     <TimeLineElement
-      title="Diploma of College Studies (DEC) in Natural Sciences"
-      subtitle="2020 to 2022 at Cégep André-Laurendeau, Montréal, Canada"
-    >Overall GPA : 91%
+      title={t('cv.education2.title')}
+      subtitle={t('cv.education2.subtitle')}
+    >{t('cv.education2.description')}
     </TimeLineElement>
     <TimeLineElement
-      title="High School Diploma"
-      subtitle="2015 to 2020 at Collège de Montréal, Montréal, Canada"
-    >Recipient of Academic Excellence Awards
+      title={t('cv.education3.title')}
+      subtitle={t('cv.education3.subtitle')}
+    >{t('cv.education3.description')}
     </TimeLineElement>
   </div>
 
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Experience</div>
+    <div class="text-3xl w-full font-bold">{t('cv.experience')}</div>
   </div>
 
   <div class="time-line-container mb-10">
     <TimeLineElement
-      title="Data Engineering Advisor (Developer)"
-      subtitle="From May 2024 to Present at Desjardins, Montréal, Canada"
-    > Developed a tool to extract used fields and their sources from SQL and SAS queries to automate impact analyses and data traceability. <br>
-      Contributed to the development of a multidimensional model in Continuous Integration/Continuous Deployment (CI/CD). <br>
-      Gained experience working in Agile mode within a large organization, requiring rigorous development, effective team communication, and continuous documentation.
-    </TimeLineElement>
-    <TimeLineElement
-      title="System Pilot Student (Developer)"
-      subtitle="From May 2023 to April 2024 at Office québécois de la langue française, Montréal, Canada"
-    > Independently handled recurring and special development mandates.<br>
-      Extracted and analyzed data using SQL programming to produce accountability reports and respond to internal and media requests.<br>
-      Quickly learned new software, including Microsoft Access, Microsoft Power BI, and internal tools.<br>
-    </TimeLineElement>
-    <TimeLineElement
-      title="Badminton Coach and Animator"
-      subtitle="From 2020 to 2023 at Badminton Lachine Club, Lachine, Canada"
+      title={t('cv.experience1.title')}
+      subtitle={t('cv.experience1.subtitle')}
     >
-      Planned and executed training sessions in coordination with assistant coaches.<br>
-      Set long-term global and personal objectives for player progression.<br>
-      Simplified and presented basic and advanced concepts to groups of 20 players.<br>
+      <div set:html={t('cv.experience1.description')}></div>
+    </TimeLineElement>
+    <TimeLineElement
+      title={t('cv.experience2.title')}
+      subtitle={t('cv.experience2.subtitle')}
+    >
+      <div set:html={t('cv.experience2.description')}></div>
+    </TimeLineElement>
+    <TimeLineElement
+      title={t('cv.experience3.title')}
+      subtitle={t('cv.experience3.subtitle')}
+    >
+      <div set:html={t('cv.experience3.description')}></div>
     </TimeLineElement>
   </div>
 
@@ -77,7 +76,7 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   <!--</ul>-->
 
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Skills</div>
+    <div class="text-3xl w-full font-bold">{t('cv.skills')}</div>
   </div>
 
   <ul class="list-disc md:columns-5 columns-2 mx-6">
