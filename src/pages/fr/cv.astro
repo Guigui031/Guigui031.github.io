@@ -8,28 +8,33 @@ const t = useTranslations('fr');
 
 <BaseLayout title={t('cv.title')} sideBarActiveItemID="cv">
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">{t('cv.title')}</div>
+    <div class="text-3xl w-full font-bold">Profil</div>
   </div>
 
   <div class="mb-10 text-justify">
-    Étudiant passionné en génie logiciel avec une forte motivation pour l'apprentissage automatique, 
-    le développement web et la création de solutions technologiques innovantes. Expérience pratique 
-    en Python, JavaScript, et diverses technologies modernes.
+    Téléchargez mon CV ici en <u><a href="/CV - Guillaume Genois - english.pdf" target="_blank" data-astro-reload>anglais</a></u> ou en <u><a href="/CV - Guillaume Genois - francais.pdf" target="_blank" data-astro-reload>français</a></u>.
   </div>
 
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Éducation</div>
+    <div class="text-3xl w-full font-bold">Formation</div>
   </div>
 
   <div class="time-line-container grid gap-4 mb-10">
     <TimeLineElement
-      title="Baccalauréat en Informatique"
-      subtitle="2021 à 2024 à l'Université de Montréal, Montréal, QC"
-    />
+      title="Baccalauréat en Mathématiques et Informatique"
+      subtitle="2022 à 2025 à l'Université de Montréal, Montréal, Canada"
+    >Spécialisation en Science des Données
+    </TimeLineElement>
     <TimeLineElement
-      title="DEC en Sciences Naturelles"
-      subtitle="2019 à 2021 au Cégep de Sherbrooke, Sherbrooke, QC"
-    />
+      title="Diplôme d'études collégiales (DEC) en Sciences de la nature"
+      subtitle="2020 à 2022 au Cégep André-Laurendeau, Montréal, Canada"
+    >Cote R globale : 91%
+    </TimeLineElement>
+    <TimeLineElement
+      title="Diplôme d'études secondaires"
+      subtitle="2015 à 2020 au Collège de Montréal, Montréal, Canada"
+    >Récipiendaire de prix d'excellence académique
+    </TimeLineElement>
   </div>
 
   <div class="mb-5">
@@ -38,18 +43,26 @@ const t = useTranslations('fr');
 
   <div class="time-line-container mb-10">
     <TimeLineElement
-      title="Développeur Stagiaire"
-      subtitle="Été 2023 chez TechCorp, Montréal, QC"
-    >
-      Développement d'applications web utilisant React et Node.js. Collaboration avec l'équipe 
-      pour implémenter de nouvelles fonctionnalités et optimiser les performances.
+      title="Conseiller en ingénierie de données (Développeur)"
+      subtitle="De mai 2024 à aujourd'hui chez Desjardins, Montréal, Canada"
+    > Développé un outil pour extraire les champs utilisés et leurs sources à partir de requêtes SQL et SAS afin d'automatiser les analyses d'impact et la traçabilité des données. <br>
+      Contribué au développement d'un modèle multidimensionnel en Intégration Continue/Déploiement Continu (CI/CD). <br>
+      Acquis de l'expérience en travaillant en mode Agile au sein d'une grande organisation, nécessitant un développement rigoureux, une communication d'équipe efficace et une documentation continue.
     </TimeLineElement>
     <TimeLineElement
-      title="Assistant de Recherche"
-      subtitle="2022-2023 à l'Université de Montréal, Montréal, QC"
+      title="Étudiant pilote de systèmes (Développeur)"
+      subtitle="De mai 2023 à avril 2024 à l'Office québécois de la langue française, Montréal, Canada"
+    > Géré de manière autonome des mandats de développement récurrents et spéciaux.<br>
+      Extrait et analysé des données en utilisant la programmation SQL pour produire des rapports de reddition de comptes et répondre aux demandes internes et médiatiques.<br>
+      Appris rapidement de nouveaux logiciels, notamment Microsoft Access, Microsoft Power BI et des outils internes.<br>
+    </TimeLineElement>
+    <TimeLineElement
+      title="Entraîneur et animateur de badminton"
+      subtitle="De 2020 à 2023 au Club de badminton Lachine, Lachine, Canada"
     >
-      Recherche en apprentissage automatique appliqué au traitement du langage naturel. 
-      Développement de modèles de classification de texte et analyse de données.
+      Planifié et exécuté des sessions d'entraînement en coordination avec les entraîneurs adjoints.<br>
+      Établi des objectifs globaux et personnels à long terme pour la progression des joueurs.<br>
+      Simplifié et présenté des concepts de base et avancés à des groupes de 20 joueurs.<br>
     </TimeLineElement>
   </div>
 
@@ -58,17 +71,30 @@ const t = useTranslations('fr');
   </div>
 
   <ul class="list-disc md:columns-5 columns-2 mx-6">
+    <li>Java</li>
     <li>Python</li>
+    <li>C++</li>
+    <li>SQL</li>
     <li>JavaScript</li>
-    <li>React</li>
-    <li>Node.js</li>
-    <li>Machine Learning</li>
-    <li>TensorFlow</li>
-    <li>PostgreSQL</li>
-    <li>MongoDB</li>
+    <li>HTML/CSS</li>
+    <li>R</li>
+    <li>SAS</li>
+    <li>Bash</li>
     <li>Git</li>
     <li>Docker</li>
-    <li>AWS</li>
-    <li>Agile/Scrum</li>
-  </ul>
+    <li>Google Cloud Platform</li>
+    <li>Conda</li>
+    <li>Visual Studio</li>
+    <li>PyCharm</li>
+    <li>Azure</li>
+    <li>DevOps</li>
+    <li>pandas</li>
+    <li>NumPy</li>
+    <li>Matplotlib</li>
+    <li>TensorFlow</li>
+    <li>nltk</li>
+    <li>node.js</li>
+    <li>PyTorch</li>
+</ul>
+
 </BaseLayout>

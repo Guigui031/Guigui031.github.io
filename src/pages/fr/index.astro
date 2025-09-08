@@ -6,17 +6,8 @@ import { useTranslations } from "../../i18n/utils";
 
 const t = useTranslations('fr');
 
-const posts = (await getCollection("blog"))
-  .filter(post => post.slug.startsWith('fr/'))
-  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-  .slice(0, 3);
-
-const projects = (await getCollection("projects"))
-  .filter(project => project.slug.startsWith('fr/') || !project.slug.includes('/'))
-  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-  .slice(0, 3);
 ---
-<BaseLayout sideBarActiveItemID="home">
+<BaseLayout sideBarActiveItemID={t("nav.home")}>
   <div class="pb-12 mt-5">
     <div class="text-5xl font-bold">About Me</div>
     <div class="text-3xl py-3 font-bold">Computer Science Student and AI Enthusiast</div>
