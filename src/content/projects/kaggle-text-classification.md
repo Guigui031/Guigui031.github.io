@@ -10,6 +10,82 @@ category: "machine-learning"
 titleFr: "Compétition Kaggle sur la classification de textes"
 descriptionFr: "Ne connaissant pas le contexte et n'ayant qu'une matrice Bag-of-Words, nous devions prédire les étiquettes binaires de nouveaux documents. Nous avons développé une petite architecture pour organiser nos soumissions et notre meilleur modèle était un classificateur d'apprentissage d'ensemble utilisant un classificateur Naïve Bayes, un classificateur XGBoost et un classificateur SVM."
 badgeFr: "Compétition"
+contentFr: |
+  # Compétition Kaggle sur la classification de textes
+
+  Un projet d'apprentissage automatique compétitif axé sur la classification de textes binaires utilisant des méthodes d'ensemble et des techniques avancées d'ingénierie des caractéristiques.
+
+  ## Défi de la compétition
+
+  ### Énoncé du problème
+  - **Contexte inconnu** : Prédire des étiquettes binaires sans connaître le domaine du document
+  - **Caractéristiques limitées** : Travailler exclusivement avec une représentation matricielle Bag-of-Words
+  - **Focus sur la performance** : Maximiser la précision de classification sur des données de test non vues
+
+  ## Architecture de la solution
+
+  ### Cadre organisationnel
+  - **Gestion des soumissions** : Approche structurée pour suivre les expériences de modèles
+  - **Contrôle de version** : Organisation systématique des différentes itérations de modèles
+  - **Suivi des performances** : Journalisation complète des métriques et améliorations des modèles
+
+  ### Développement de modèles
+
+  #### Classificateurs individuels
+  - **Classificateur Naïve Bayes** : Approche probabiliste tirant parti de l'hypothèse d'indépendance des mots
+  - **Classificateur XGBoost** : Gradient boosting pour la reconnaissance de motifs complexes
+  - **Machine à vecteurs de support (SVM)** : Classification linéaire avec séparation de marge optimale
+
+  #### Stratégie d'ensemble
+  - **Apprentissage d'ensemble** : Prédictions combinées de plusieurs classificateurs divers
+  - **Mécanisme de vote** : Combinaison pondérée basée sur les performances individuelles des modèles
+  - **Validation croisée** : Stratégie de validation robuste pour prévenir le surapprentissage
+
+  ## Implémentation technique
+
+  ### Ingénierie des caractéristiques
+  - **Traitement Bag-of-Words** : Optimisation des représentations matricielles creuses
+  - **Sélection des caractéristiques** : Identification des termes les plus informatifs
+  - **Gestion de la dimensionnalité** : Gestion efficace des données textuelles haute dimension
+
+  ### Formation et validation des modèles
+  - **Optimisation des hyperparamètres** : Recherche par grille pour chaque classificateur
+  - **Validation croisée** : Validation K-fold pour une estimation fiable des performances
+  - **Optimisation d'ensemble** : Réglage fin des poids de combinaison et des stratégies
+
+  ## Résultats et performances
+
+  ### Résultats de la compétition
+  - **Modèle final** : Classificateur d'apprentissage d'ensemble comme meilleur performeur
+  - **Métriques de performance** : Précision supérieure comparée aux modèles individuels
+  - **Classement** : Placement compétitif dans le leaderboard Kaggle
+
+  ### Apprentissages clés
+  - **Avantages de l'ensemble** : Démonstration de la puissance de la combinaison de classificateurs divers
+  - **Importance des caractéristiques** : Aperçus des caractéristiques textuelles discriminatives
+  - **Généralisation** : Performance robuste sur des données non vues
+
+  ## Stack technique
+
+  - **Python** : Langage de développement principal
+  - **Scikit-learn** : Modèles d'apprentissage automatique et évaluation
+  - **XGBoost** : Implémentation du gradient boosting
+  - **Pandas/NumPy** : Manipulation de données et calcul numérique
+  - **Matplotlib/Seaborn** : Visualisation des performances
+
+  ## Collaboration
+
+  Ce projet a été développé en collaboration avec des membres de l'équipe, mettant l'accent sur :
+  - **Organisation du code** : Structure et normes de dépôt partagé
+  - **Intégration de modèles** : Développement coordonné d'ensemble
+  - **Analyse des performances** : Interprétation collaborative des résultats
+
+  ## Applications futures
+
+  L'approche d'ensemble et le cadre organisationnel développés dans cette compétition peuvent être appliqués à :
+  - **Classification de textes d'affaires** : Commentaires clients, catégorisation de documents
+  - **Recherche académique** : Classification et analyse de littérature
+  - **Systèmes de production** : Services de classification de textes évolutifs
 ---
 
 # Kaggle Competition on Text Classification

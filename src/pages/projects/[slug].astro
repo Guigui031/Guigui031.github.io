@@ -1,6 +1,8 @@
 ---
 import { type CollectionEntry, getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getLangFromUrl } from '../../i18n/utils';
+import { marked } from 'marked';
 
 export async function getStaticPaths() {
     const projects = await getCollection('projects');
@@ -14,28 +16,35 @@ type Props = CollectionEntry<'projects'>;
 
 const project = Astro.props;
 const { Content } = await project.render();
+const lang = getLangFromUrl(Astro.url);
+
+// Get the appropriate content based on language
+const displayTitle = lang === 'fr' && project.data.titleFr ? project.data.titleFr : project.data.title;
+const displayDescription = lang === 'fr' && project.data.descriptionFr ? project.data.descriptionFr : project.data.description;
+const displayBadge = lang === 'fr' && project.data.badgeFr ? project.data.badgeFr : project.data.badge;
+const displayContent = lang === 'fr' && project.data.contentFr ? marked(project.data.contentFr) : null;
 ---
 
-<BaseLayout title={project.data.title} sideBarActiveItemID="projects">
+<BaseLayout title={displayTitle} sideBarActiveItemID="projects">
     <div class="pb-12 mt-5">
         <div class="text-xl pb-1">
-            <a href="/projects" class="btn btn-ghost text-neutral-content">
+            <a href={lang === 'fr' ? '/fr/projects' : '/projects'} class="btn btn-ghost text-neutral-content">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                 </svg>
-                Back to Projects
+                {lang === 'fr' ? 'Retour aux projets' : 'Back to Projects'}
             </a>
         </div>
         
-        <div class="text-5xl font-bold">{project.data.title}</div>
+        <div class="text-5xl font-bold">{displayTitle}</div>
         
         <div class="text-lg py-4 opacity-70">
-            {project.data.description}
+            {displayDescription}
         </div>
         
         <div class="flex flex-wrap gap-2 mt-2">
-            {project.data.badge && (
-                <div class="badge badge-primary">{project.data.badge}</div>
+            {displayBadge && (
+                <div class="badge badge-primary">{displayBadge}</div>
             )}
             {project.data.tags && project.data.tags.map((tag) => (
                 <div class="badge badge-outline">{tag}</div>
@@ -63,20 +72,24 @@ const { Content } = await project.render();
         
         {project.data.heroImage && (
             <div class="mt-8">
-                <img src={project.data.heroImage} alt={project.data.title} class="w-full max-w-4xl mx-auto rounded-lg shadow-lg" />
+                <img src={project.data.heroImage} alt={displayTitle} class="w-full max-w-4xl mx-auto rounded-lg shadow-lg" />
             </div>
         )}
         
         <div class="mt-8">
             <div class="prose prose-lg max-w-none">
-                <Content />
+                {displayContent ? (
+                    <div set:html={displayContent} />
+                ) : (
+                    <Content />
+                )}
             </div>
         </div>
         
         <div class="mt-12 pt-8 border-t">
             <div class="text-center">
-                <a href="/projects" class="btn btn-primary">
-                    ← Back to All Projects
+                <a href={lang === 'fr' ? '/fr/projects' : '/projects'} class="btn btn-primary">
+                    {lang === 'fr' ? '← Retour à tous les projets' : '← Back to All Projects'}
                 </a>
             </div>
         </div>

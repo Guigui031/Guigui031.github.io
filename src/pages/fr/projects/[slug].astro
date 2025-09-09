@@ -1,6 +1,8 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
 import PostLayout from "../../../layouts/PostLayout.astro";
+import { getLangFromUrl } from "../../../i18n/utils";
+import { marked } from 'marked';
 
 export async function getStaticPaths() {
   const projects = await getCollection("projects");
@@ -16,8 +18,19 @@ type Props = CollectionEntry<"projects">;
 
 const project = Astro.props;
 const { Content } = await project.render();
+const lang = getLangFromUrl(Astro.url);
+
+// Get the appropriate content based on language
+const displayTitle = lang === 'fr' && project.data.titleFr ? project.data.titleFr : project.data.title;
+const displayDescription = lang === 'fr' && project.data.descriptionFr ? project.data.descriptionFr : project.data.description;
+const displayBadge = lang === 'fr' && project.data.badgeFr ? project.data.badgeFr : project.data.badge;
+const displayContent = lang === 'fr' && project.data.contentFr ? marked(project.data.contentFr) : null;
 ---
 
-<PostLayout title={project.data.title} description={project.data.description} pubDate={project.data.pubDate} heroImage={project.data.heroImage} badge={project.data.badge}>
-  <Content />
+<PostLayout title={displayTitle} description={displayDescription} pubDate={project.data.pubDate} heroImage={project.data.heroImage} badge={displayBadge}>
+  {displayContent ? (
+    <div set:html={displayContent} />
+  ) : (
+    <Content />
+  )}
 </PostLayout>
