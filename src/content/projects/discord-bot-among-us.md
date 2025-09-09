@@ -7,6 +7,9 @@ badge: "Bot Development"
 tags: ["Discord.js", "JavaScript", "Bot", "Among Us", "Automation"]
 githubUrl: "https://github.com/Guigui031/Among-Us-Discord-Bot"
 category: "automation"
+titleFr: "Développement d'un bot Discord en JavaScript"
+descriptionFr: "Développement d'un bot Discord en JavaScript pour Among Us, automatisant la mise en sourdine des joueurs et le changement de canal pour permettre aux joueurs morts de communiquer tout en écoutant les vivants."
+badgeFr: "Développement de bot"
 ---
 
 # Among Us Discord Bot

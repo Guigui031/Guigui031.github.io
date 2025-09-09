@@ -7,6 +7,9 @@ badge: "Web Development"
 tags: ["HTML5", "CSS", "Bootstrap", "Web Design", "UX"]
 githubUrl: "https://github.com/Guigui031/Redesign-AuxVoletsNoirs-Website"
 category: "web-development"
+titleFr: "Conception et développement d'un site web en HTML5"
+descriptionFr: "Refonte du site web du vignoble Aux Volets Noirs en utilisant HTML5, CSS et Bootstrap pour acquérir de l'expérience sur ces technologies tout en travaillant à offrir la meilleure expérience utilisateur."
+badgeFr: "Développement web"
 ---
 
 # Design and Development of a Website in HTML5

@@ -20,11 +20,11 @@ const otherProjects = projects.filter(project => project.data.category !== 'mach
   {mlProjects.map((project) => (
     <>
       <HorizontalCard
-        title={project.data.title}
+        title={lang === 'fr' && project.data.titleFr ? project.data.titleFr : project.data.title}
         img={project.data.heroImage}
-        desc={project.data.description}
+        desc={lang === 'fr' && project.data.descriptionFr ? project.data.descriptionFr : project.data.description}
         url={localizeUrl(`/projects/${project.slug}`, lang)}
-        badge={project.data.badge}
+        badge={lang === 'fr' && project.data.badgeFr ? project.data.badgeFr : project.data.badge}
         tags={project.data.tags}
       />
       <div class="divider my-0"></div>
@@ -38,11 +38,11 @@ const otherProjects = projects.filter(project => project.data.category !== 'mach
   {otherProjects.map((project) => (
     <>
       <HorizontalCard
-        title={project.data.title}
+        title={lang === 'fr' && project.data.titleFr ? project.data.titleFr : project.data.title}
         img={project.data.heroImage}
-        desc={project.data.description}
+        desc={lang === 'fr' && project.data.descriptionFr ? project.data.descriptionFr : project.data.description}
         url={localizeUrl(`/projects/${project.slug}`, lang)}
-        badge={project.data.badge}
+        badge={lang === 'fr' && project.data.badgeFr ? project.data.badgeFr : project.data.badge}
         tags={project.data.tags}
       />
       <div class="divider my-0"></div>

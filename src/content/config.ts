@@ -34,6 +34,9 @@ const projectSchema = z.object({
     githubUrl: z.string().optional(),
     demoUrl: z.string().optional(),
     category: z.enum(['machine-learning', 'web-development', 'mobile', 'game-development', 'automation', 'other']).optional(),
+    titleFr: z.string().optional(),
+    descriptionFr: z.string().optional(),
+    badgeFr: z.string().optional(),
 });
 
 export type BlogSchema = z.infer<typeof blogSchema>;

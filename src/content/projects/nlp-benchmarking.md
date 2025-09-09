@@ -7,6 +7,9 @@ badge: "Research"
 tags: ["NLP", "GLUE", "Benchmarking", "Paraphrase Detection", "Bias Analysis"]
 githubUrl: "https://github.com/Guigui031/Benchmarking-NLP-Model-Performances"
 category: "machine-learning"
+titleFr: "Évaluation comparative des performances des modèles NLP"
+descriptionFr: "Ce projet évalue et compare divers systèmes de classification de textes capables d'identifier les paraphrases entre phrases, testant la robustesse des modèles sur les jeux de données QQP et MRPC du corpus GLUE. De plus, le projet explore si un entraînement biaisé peut conduire à des performances biaisées et expérimente avec différents encodeurs pour identifier les plus performants et généralisables."
+badgeFr: "Recherche"
 ---
 
 # Benchmarking NLP Model Performances

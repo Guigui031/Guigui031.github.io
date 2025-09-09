@@ -7,6 +7,9 @@ badge: "Research"
 tags: ["LLM", "Data Curation", "Systematic Review", "Mila", "Research"]
 githubUrl: "https://github.com/geodes-sms/IFT3150-ProjetCurationMetadonnees"
 category: "machine-learning"
+titleFr: "Curation de métadonnées pour évaluer l'utilisation des LLM dans le contexte d'une revue systématique"
+descriptionFr: "Ce projet consiste à collecter les métadonnées d'articles dans des revues systématiques pour créer des jeux de données propres. Le programme développé effectue un nettoyage automatique, une définition et un alignement des données pour tous ces articles. Les jeux de données sont utilisés par un étudiant à la maîtrise affilié à Mila pour évaluer l'utilisation des LLM dans la phase de sélection des revues systématiques."
+badgeFr: "Recherche"
 ---
 
 # Metadata Curation for LLM Evaluation in Systematic Reviews

@@ -7,6 +7,9 @@ badge: "IoT"
 tags: ["Arduino", "IoT", "Telegram", "Ultrasonic Sensor", "Automation"]
 githubUrl: "https://github.com/Guigui031/CarEnteringParkingDetectionSystem"
 category: "automation"
+titleFr: "Détection automatique des voitures entrantes dans un stationnement"
+descriptionFr: "Système Arduino physique avec un capteur ultrasonique qui envoie des notifications mobiles via Telegram lorsqu'une voiture passe. Le système opérationnel sera déployé l'été prochain au vignoble Aux Volets Noirs."
+badgeFr: "IoT"
 ---
 
 # Automatic Detection of Incoming Cars in a Parking Lot

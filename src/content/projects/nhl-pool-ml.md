@@ -7,6 +7,9 @@ badge: "Machine Learning"
 tags: ["Machine Learning", "Python", "API", "NHL", "Branch-and-Bound"]
 githubUrl: "https://github.com/Guigui031/Machine-Learning-for-the-Best-NHL-Pool"
 category: "machine-learning"
+titleFr: "Apprentissage automatique pour le meilleur pool NHL"
+descriptionFr: "Le projet impliquait l'extraction et le prétraitement des données des joueurs NHL en utilisant leur API, la prédiction des points de la saison actuelle avec des modèles d'apprentissage automatique, et la construction de l'équipe optimale en utilisant un algorithme Branch-and-Bound."
+badgeFr: "Apprentissage automatique"
 ---
 
 # Machine Learning for the Best NHL Pool

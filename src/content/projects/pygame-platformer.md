@@ -7,6 +7,9 @@ badge: "Game Dev"
 tags: ["Python", "Pygame", "2D Platformer", "Game Development"]
 githubUrl: "https://github.com/Guigui031/Platformer-Using-Pygame"
 category: "game-development"
+titleFr: "Développement d'un jeu personnel en Python"
+descriptionFr: "Développement d'un jeu personnel en Python utilisant la bibliothèque Pygame : un jeu de plateforme 2D où les joueurs gagnent des pouvoirs supplémentaires à chaque niveau."
+badgeFr: "Dév de jeu"
 ---
 
 # Python 2D Platformer Game
