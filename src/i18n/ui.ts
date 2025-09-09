@@ -61,6 +61,8 @@ export const ui = {
     'cv.experience3.title': 'Badminton Coach and Animator',
     'cv.experience3.subtitle': 'From 2020 to 2023 at Badminton Lachine Club, Lachine, Canada',
     'cv.experience3.description': 'Planned and executed training sessions in coordination with assistant coaches.<br> Set long-term global and personal objectives for player progression.<br> Simplified and presented basic and advanced concepts to groups of 20 players.<br>',
+    'projects.mlSection': 'Machine Learning Projects',
+    'projects.miscSection': 'Miscellaneous Projects',
   },
   fr: {
     'nav.home': 'Accueil',
@@ -117,5 +119,7 @@ export const ui = {
     'cv.experience3.title': 'Entraîneur et animateur de badminton',
     'cv.experience3.subtitle': 'De 2020 à 2023 au Club de badminton Lachine, Lachine, Canada',
     'cv.experience3.description': 'Planifié et exécuté des sessions d\'entraînement en coordination avec les entraîneurs adjoints.<br> Établi des objectifs globaux et personnels à long terme pour la progression des joueurs.<br> Simplifié et présenté des concepts de base et avancés à des groupes de 20 joueurs.<br>',
+    'projects.mlSection': 'Projets d\'apprentissage automatique',
+    'projects.miscSection': 'Projets divers',
   },
 } as const

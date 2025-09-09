@@ -2,15 +2,19 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
 import { getCollection } from 'astro:content';
+import { getLangFromUrl, useTranslations, localizeUrl } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 const projects = await getCollection('projects');
 const mlProjects = projects.filter(project => project.data.category === 'machine-learning');
 const otherProjects = projects.filter(project => project.data.category !== 'machine-learning');
 ---
 
-<BaseLayout title = "Projects" sideBarActiveItemID="projects">
+<BaseLayout title={t('projects.title')} sideBarActiveItemID={t('nav.projects')}>
   <div>
-    <div class="text-3xl w-full font-bold mb-5">Machine Learning Projects</div>
+    <div class="text-3xl w-full font-bold mb-5">{t('projects.mlSection')}</div>
   </div>
 
   {mlProjects.map((project) => (
@@ -19,7 +23,7 @@ const otherProjects = projects.filter(project => project.data.category !== 'mach
         title={project.data.title}
         img={project.data.heroImage}
         desc={project.data.description}
-        url={`/projects/${project.slug}`}
+        url={localizeUrl(`/projects/${project.slug}`, lang)}
         badge={project.data.badge}
         tags={project.data.tags}
       />
@@ -28,7 +32,7 @@ const otherProjects = projects.filter(project => project.data.category !== 'mach
   ))}
 
   <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Miscellaneous Projects</div>
+    <div class="text-3xl w-full font-bold mb-5 mt-10">{t('projects.miscSection')}</div>
   </div>
 
   {otherProjects.map((project) => (
@@ -37,7 +41,7 @@ const otherProjects = projects.filter(project => project.data.category !== 'mach
         title={project.data.title}
         img={project.data.heroImage}
         desc={project.data.description}
-        url={`/projects/${project.slug}`}
+        url={localizeUrl(`/projects/${project.slug}`, lang)}
         badge={project.data.badge}
         tags={project.data.tags}
       />
