@@ -3,13 +3,13 @@ title: "Automatic Detection of Incoming Cars in a Parking Lot"
 description: "Physical Arduino system with an ultrasonic sensor that sends mobile notifications using Telegram when a car passes by. The operational system will be deployed next summer at the Aux Volets Noirs vineyard."
 pubDate: 2023-05-01
 heroImage: "/AuxVoletsNoirs_entree.png"
-badge: "IoT"
-tags: ["Arduino", "IoT", "Telegram", "Ultrasonic Sensor", "Automation"]
+badge: ""
+tags: []
 githubUrl: "https://github.com/Guigui031/CarEnteringParkingDetectionSystem"
 category: "automation"
 titleFr: "Détection automatique des voitures entrantes dans un stationnement"
 descriptionFr: "Système Arduino physique avec un capteur ultrasonique qui envoie des notifications mobiles via Telegram lorsqu'une voiture passe. Le système opérationnel sera déployé l'été prochain au vignoble Aux Volets Noirs."
-badgeFr: "IoT"
+badgeFr: ""
 contentFr: |
   # Détection automatique des voitures entrantes dans un stationnement
 

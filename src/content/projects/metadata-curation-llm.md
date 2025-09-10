@@ -3,13 +3,13 @@ title: "Metadata curation to evaluate the use of LLMs in the context of a system
 description: "This project is about collecting metadata from articles in systematic reviews to create clean datasets. The developped program performs automatic data cleaning, definition, and alignment for all these articles. The datasets are used by a Mila-affiliated M.Sc. student to evaluate the use of LLMs in the screening phase of systematic review."
 pubDate: 2023-06-01
 heroImage: "/ProjetCurationMetadonnees.png"
-badge: "Research"
-tags: ["LLM", "Data Curation", "Systematic Review", "Mila", "Research"]
+badge: ""
+tags: []
 githubUrl: "https://github.com/geodes-sms/IFT3150-ProjetCurationMetadonnees"
 category: "machine-learning"
 titleFr: "Curation de métadonnées pour évaluer l'utilisation des LLM dans le contexte d'une revue systématique"
 descriptionFr: "Ce projet consiste à collecter les métadonnées d'articles dans des revues systématiques pour créer des jeux de données propres. Le programme développé effectue un nettoyage automatique, une définition et un alignement des données pour tous ces articles. Les jeux de données sont utilisés par un étudiant à la maîtrise affilié à Mila pour évaluer l'utilisation des LLM dans la phase de sélection des revues systématiques."
-badgeFr: "Recherche"
+badgeFr: ""
 contentFr: |
   # Curation de métadonnées pour l'évaluation LLM en revues systématiques
 

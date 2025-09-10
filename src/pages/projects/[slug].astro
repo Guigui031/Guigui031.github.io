@@ -1,7 +1,7 @@
 ---
 import { type CollectionEntry, getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getLangFromUrl } from '../../i18n/utils';
+import { getLangFromUrl, localizeUrl } from '../../i18n/utils';
 import { marked } from 'marked';
 
 export async function getStaticPaths() {
@@ -28,7 +28,7 @@ const displayContent = lang === 'fr' && project.data.contentFr ? marked(project.
 <BaseLayout title={displayTitle} sideBarActiveItemID="projects">
     <div class="pb-12 mt-5">
         <div class="text-xl pb-1">
-            <a href={lang === 'fr' ? '/fr/projects' : '/projects'} class="btn btn-ghost text-neutral-content">
+            <a href={localizeUrl('/projects', lang)} class="btn btn-ghost text-neutral-content">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                 </svg>
@@ -88,7 +88,7 @@ const displayContent = lang === 'fr' && project.data.contentFr ? marked(project.
         
         <div class="mt-12 pt-8 border-t">
             <div class="text-center">
-                <a href={lang === 'fr' ? '/fr/projects' : '/projects'} class="btn btn-primary">
+                <a href={localizeUrl('/projects', lang)} class="btn btn-primary">
                     {lang === 'fr' ? '← Retour à tous les projets' : '← Back to All Projects'}
                 </a>
             </div>

@@ -1,24 +1,25 @@
 ---
-import { type CollectionEntry, getCollection } from "astro:content";
-import PostLayout from "../../../layouts/PostLayout.astro";
-import { getLangFromUrl } from "../../../i18n/utils";
+import { type CollectionEntry, getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { useTranslations, localizeUrl } from '../../../i18n/utils';
 import { marked } from 'marked';
 
 export async function getStaticPaths() {
-  const projects = await getCollection("projects");
-  return projects
-    .filter(project => project.slug.startsWith('fr/') || !project.slug.includes('/'))
-    .map((project) => ({
-      params: { slug: project.slug.startsWith('fr/') ? project.slug.replace('fr/', '') : project.slug },
-      props: project,
+    const projects = await getCollection('projects');
+    return projects.map((project) => ({
+        params: { slug: project.slug },
+        props: project,
     }));
 }
 
-type Props = CollectionEntry<"projects">;
+type Props = CollectionEntry<'projects'>;
 
 const project = Astro.props;
 const { Content } = await project.render();
-const lang = getLangFromUrl(Astro.url);
+
+// Force French locale
+const lang = 'fr';
+const t = useTranslations(lang);
 
 // Get the appropriate content based on language
 const displayTitle = lang === 'fr' && project.data.titleFr ? project.data.titleFr : project.data.title;
@@ -27,10 +28,73 @@ const displayBadge = lang === 'fr' && project.data.badgeFr ? project.data.badgeF
 const displayContent = lang === 'fr' && project.data.contentFr ? marked(project.data.contentFr) : null;
 ---
 
-<PostLayout title={displayTitle} description={displayDescription} pubDate={project.data.pubDate} heroImage={project.data.heroImage} badge={displayBadge}>
-  {displayContent ? (
-    <div set:html={displayContent} />
-  ) : (
-    <Content />
-  )}
-</PostLayout>
+<BaseLayout title={displayTitle} sideBarActiveItemID="projects">
+    <div class="pb-12 mt-5">
+        <div class="text-xl pb-1">
+            <a href={localizeUrl('/projects', lang)} class="btn btn-ghost text-neutral-content">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                </svg>
+                {lang === 'fr' ? 'Retour aux projets' : 'Back to Projects'}
+            </a>
+        </div>
+        
+        <div class="text-5xl font-bold">{displayTitle}</div>
+        
+        <div class="text-lg py-4 opacity-70">
+            {displayDescription}
+        </div>
+        
+        <div class="flex flex-wrap gap-2 mt-2">
+            {displayBadge && (
+                <div class="badge badge-primary">{displayBadge}</div>
+            )}
+            {project.data.tags && project.data.tags.map((tag) => (
+                <div class="badge badge-outline">{tag}</div>
+            ))}
+        </div>
+        
+        <div class="flex gap-4 mt-6">
+            {project.data.githubUrl && (
+                <a href={project.data.githubUrl} target="_blank" class="btn btn-outline">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                    </svg>
+                    View on GitHub
+                </a>
+            )}
+            {project.data.demoUrl && (
+                <a href={project.data.demoUrl} target="_blank" class="btn btn-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                    </svg>
+                    Live Demo
+                </a>
+            )}
+        </div>
+        
+        {project.data.heroImage && (
+            <div class="mt-8">
+                <img src={project.data.heroImage} alt={displayTitle} class="w-full max-w-4xl mx-auto rounded-lg shadow-lg" />
+            </div>
+        )}
+        
+        <div class="mt-8">
+            <div class="prose prose-lg max-w-none">
+                {displayContent ? (
+                    <div set:html={displayContent} />
+                ) : (
+                    <Content />
+                )}
+            </div>
+        </div>
+        
+        <div class="mt-12 pt-8 border-t">
+            <div class="text-center">
+                <a href={localizeUrl('/projects', lang)} class="btn btn-primary">
+                    {lang === 'fr' ? '← Retour à tous les projets' : '← Back to All Projects'}
+                </a>
+            </div>
+        </div>
+    </div>
+</BaseLayout>

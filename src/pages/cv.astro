@@ -12,8 +12,11 @@ const t = useTranslations(lang);
     <div class="text-3xl w-full font-bold">{t('cv.profile')}</div>
   </div>
 
-  <div class="mb-10 text-justify" set:html={t('cv.download')}>
-  </div>
+  <!-- <div class="mb-10 text-justify" set:html={t('cv.download')}>
+  </div> -->
+  <a class="btn btn-outline mb-10" href={t('cv.link')} target="_blank" data-astro-reload>{t('cv.download')}</a>
+
+  
 
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">{t('cv.education')}</div>
@@ -34,6 +37,11 @@ const t = useTranslations(lang);
       title={t('cv.education3.title')}
       subtitle={t('cv.education3.subtitle')}
     >{t('cv.education3.description')}
+    </TimeLineElement>
+    <TimeLineElement
+      title={t('cv.education4.title')}
+      subtitle={t('cv.education4.subtitle')}
+    >{t('cv.education4.description')}
     </TimeLineElement>
   </div>
 

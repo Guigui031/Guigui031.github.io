@@ -3,13 +3,13 @@ title: "Kaggle Competition on Text Classification"
 description: "Not knowing the context and only having a Bag-of-Words matrix, we needed to predict the binary labels of new documents. We developped a small architecture to organize our submissions and our best model was an Ensemble Learning Classifier using a Naïve Bayes Classifier, an XGBoost Classifier and a SVM Classifier."
 pubDate: 2022-12-01
 heroImage: "/KaggleCompetition.svg"
-badge: "Competition"
-tags: ["Machine Learning", "Text Classification", "Ensemble Learning", "Kaggle", "NLP"]
+badge: ""
+tags: []
 githubUrl: "https://github.com/KamenDamov/kaggle_competition"
 category: "machine-learning"
 titleFr: "Compétition Kaggle sur la classification de textes"
 descriptionFr: "Ne connaissant pas le contexte et n'ayant qu'une matrice Bag-of-Words, nous devions prédire les étiquettes binaires de nouveaux documents. Nous avons développé une petite architecture pour organiser nos soumissions et notre meilleur modèle était un classificateur d'apprentissage d'ensemble utilisant un classificateur Naïve Bayes, un classificateur XGBoost et un classificateur SVM."
-badgeFr: "Compétition"
+badgeFr: ""
 contentFr: |
   # Compétition Kaggle sur la classification de textes
 

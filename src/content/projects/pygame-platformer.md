@@ -3,13 +3,13 @@ title: "Development of a Personal Game in Python"
 description: "Developing a personal game in Python using the Pygame library: a 2D platformer where players gain additional powers each level."
 pubDate: 2021-05-01
 heroImage: "/PygamePlatformer.png"
-badge: "Game Dev"
-tags: ["Python", "Pygame", "2D Platformer", "Game Development"]
+badge: ""
+tags: []
 githubUrl: "https://github.com/Guigui031/Platformer-Using-Pygame"
 category: "game-development"
 titleFr: "Développement d'un jeu personnel en Python"
 descriptionFr: "Développement d'un jeu personnel en Python utilisant la bibliothèque Pygame : un jeu de plateforme 2D où les joueurs gagnent des pouvoirs supplémentaires à chaque niveau."
-badgeFr: "Dév de jeu"
+badgeFr: ""
 contentFr: |
   # Jeu de plateforme 2D en Python
 

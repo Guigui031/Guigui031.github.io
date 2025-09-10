@@ -3,13 +3,13 @@ title: "Development of a Discord Bot in JavaScript"
 description: "Developing a Discord bot in JavaScript for Among Us, automating player muting and channel switching to let dead players communicate while listening to the alive ones."
 pubDate: 2021-10-01
 heroImage: "/AmongUsDiscordBot.png"
-badge: "Bot Development"
-tags: ["Discord.js", "JavaScript", "Bot", "Among Us", "Automation"]
+badge: ""
+tags: []
 githubUrl: "https://github.com/Guigui031/Among-Us-Discord-Bot"
 category: "automation"
 titleFr: "Développement d'un bot Discord en JavaScript"
 descriptionFr: "Développement d'un bot Discord en JavaScript pour Among Us, automatisant la mise en sourdine des joueurs et le changement de canal pour permettre aux joueurs morts de communiquer tout en écoutant les vivants."
-badgeFr: "Développement de bot"
+badgeFr: ""
 contentFr: |
   # Bot Discord Among Us
 

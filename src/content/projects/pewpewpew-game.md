@@ -3,13 +3,13 @@ title: "Development of a Mobile Game with the Godot Game Engine"
 description: "Developing a mobile game using the Godot Engine named PewPewPew: a top-down shooter where players survive against hordes of zombies."
 pubDate: 2022-03-01
 heroImage: "/PewPewPew.png"
-badge: "Game Dev"
-tags: ["Godot", "Game Development", "Mobile", "Top-down Shooter"]
+badge: ""
+tags: []
 githubUrl: "https://github.com/Guigui031/PewPewPew-an-Android-Game"
 category: "game-development"
 titleFr: "Développement d'un jeu mobile avec le moteur de jeu Godot"
 descriptionFr: "Développement d'un jeu mobile utilisant le moteur Godot nommé PewPewPew : un jeu de tir en vue de dessus où les joueurs survivent contre des hordes de zombies."
-badgeFr: "Dév de jeu"
+badgeFr: ""
 contentFr: |
   # PewPewPew : Jeu mobile de survie zombie
 

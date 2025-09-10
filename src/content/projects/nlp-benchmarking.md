@@ -3,13 +3,13 @@ title: "Benchmarking NLP Model Performances"
 description: "This project evaluates and compares various text classification systems capable of identifying paraphrases between sentences, testing the robustness of the models on the QQP and MRPC datasets from the GLUE corpus. Furthermore, the project explores whether biased training can lead to biased performance and experiments with different encoders to identify the most performant and generalizable ones."
 pubDate: 2023-04-01
 heroImage: "/NLP_Benchmark.png"
-badge: "Research"
-tags: ["NLP", "GLUE", "Benchmarking", "Paraphrase Detection", "Bias Analysis"]
+badge: ""
+tags: []
 githubUrl: "https://github.com/Guigui031/Benchmarking-NLP-Model-Performances"
 category: "machine-learning"
 titleFr: "Évaluation comparative des performances des modèles NLP"
 descriptionFr: "Ce projet évalue et compare divers systèmes de classification de textes capables d'identifier les paraphrases entre phrases, testant la robustesse des modèles sur les jeux de données QQP et MRPC du corpus GLUE. De plus, le projet explore si un entraînement biaisé peut conduire à des performances biaisées et expérimente avec différents encodeurs pour identifier les plus performants et généralisables."
-badgeFr: "Recherche"
+badgeFr: ""
 contentFr: |
   # Évaluation comparative des performances des modèles NLP
 

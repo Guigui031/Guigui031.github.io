@@ -3,13 +3,13 @@ title: "Design and Development of a Website in HTML5"
 description: "Redesigning the Aux Volets Noirs vineyard website using HTML5, CSS, and Bootstrap to gain experience on these technologies while working on giving the best user experience."
 pubDate: 2022-08-01
 heroImage: "/AuxVoletsNoirs_website_redesign.png"
-badge: "Web Development"
-tags: ["HTML5", "CSS", "Bootstrap", "Web Design", "UX"]
+badge: ""
+tags: []
 githubUrl: "https://github.com/Guigui031/Redesign-AuxVoletsNoirs-Website"
 category: "web-development"
 titleFr: "Conception et développement d'un site web en HTML5"
 descriptionFr: "Refonte du site web du vignoble Aux Volets Noirs en utilisant HTML5, CSS et Bootstrap pour acquérir de l'expérience sur ces technologies tout en travaillant à offrir la meilleure expérience utilisateur."
-badgeFr: "Développement web"
+badgeFr: ""
 contentFr: |
   # Conception et développement d'un site web en HTML5
 
