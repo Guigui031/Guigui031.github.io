@@ -3,7 +3,11 @@ import SideBarFooter from "./SideBarFooter.astro";
 import { Image } from "astro:assets";
 import SideBarMenu from "./SideBarMenu.astro";
 import LanguageSwitcher from "./LanguageSwitcher.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
 const { sideBarActiveItemID } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <div class="drawer-side z-40">
@@ -19,8 +23,12 @@ const { sideBarActiveItemID } = Astro.props;
       </a>
     </div>
     <div class="text-2xl text-center font-bold">Guillaume Genois</div>
-    <div class="text-1xl text-center font-bold">B.Sc. Student in C.S.</div>
-    <div class="text-1xl text-center font-bold">Université de Montréal</div>
+    <div class="text-1xl text-center font-bold">
+      {t('sidebar.degree')}
+    </div>
+    <div class="text-1xl text-center">
+      {t('sidebar.institution')}
+    </div>
     <div class="text-1xl text-center font-bold"></div>
     
     <div class="flex justify-center mt-4 mb-2">

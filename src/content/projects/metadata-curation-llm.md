@@ -1,6 +1,6 @@
 ---
 title: "Metadata curation to evaluate the use of LLMs in the context of a systematic review"
-description: "This project is about collecting metadata from articles in systematic reviews to create clean datasets. The developped program performs automatic data cleaning, definition, and alignment for all these articles. The datasets are used by a Mila-affiliated M.Sc. student to evaluate the use of LLMs in the screening phase of systematic review."
+description: "This project is about collecting metadata from articles in systematic reviews to create clean datasets. The developped program performs automatic data cleaning, definition, and alignment for all these articles. The datasets are used by a Mila - Quebec Artificial Intelligence Institute affiliated M.Sc. student to evaluate the use of LLMs in the screening phase of systematic review."
 pubDate: 2023-06-01
 heroImage: "/ProjetCurationMetadonnees.png"
 badge: ""
@@ -8,7 +8,7 @@ tags: []
 githubUrl: "https://github.com/geodes-sms/IFT3150-ProjetCurationMetadonnees"
 category: "machine-learning"
 titleFr: "Curation de métadonnées pour évaluer l'utilisation des LLM dans le contexte d'une revue systématique"
-descriptionFr: "Ce projet consiste à collecter les métadonnées d'articles dans des revues systématiques pour créer des jeux de données propres. Le programme développé effectue un nettoyage automatique, une définition et un alignement des données pour tous ces articles. Les jeux de données sont utilisés par un étudiant à la maîtrise affilié à Mila pour évaluer l'utilisation des LLM dans la phase de sélection des revues systématiques."
+descriptionFr: "Ce projet consiste à collecter les métadonnées d'articles dans des revues systématiques pour créer des jeux de données propres. Le programme développé effectue un nettoyage automatique, une définition et un alignement des données pour tous ces articles. Les jeux de données sont utilisés par un étudiant à la maîtrise affilié à Mila - Institut québécois d'intelligence artificielle pour évaluer l'utilisation des LLM dans la phase de sélection des revues systématiques."
 badgeFr: ""
 contentFr: |
   # Curation de métadonnées pour l'évaluation LLM en revues systématiques
@@ -17,7 +17,7 @@ contentFr: |
 
   ## Contexte du projet
 
-  Ce projet a été développé en collaboration avec un étudiant à la maîtrise affilié à Mila pour soutenir la recherche sur l'utilisation des grands modèles de langage dans la phase de sélection des revues systématiques - une étape critique dans la méthodologie de recherche académique.
+  Ce projet a été développé en collaboration avec un étudiant à la maîtrise affilié à Mila - Institut québécois d'intelligence artificielle pour soutenir la recherche sur l'utilisation des grands modèles de langage dans la phase de sélection des revues systématiques - une étape critique dans la méthodologie de recherche académique.
 
   ## Objectifs du projet
 
@@ -41,7 +41,7 @@ contentFr: |
   - **Validation de schéma** : Assurance de conformité aux standards de recherche
 
   ### Intégration de recherche
-  - **Collaboration Mila** : Support direct pour recherche de maîtrise en cours
+  - **Collaboration Mila - Institut québécois d'intelligence artificielle** : Support direct pour recherche de maîtrise en cours
   - **Évaluation LLM** : Jeux de données spécifiquement conçus pour l'évaluation de modèles
   - **Contexte de revue systématique** : Compréhension des exigences spécifiques au domaine
 
@@ -110,7 +110,7 @@ contentFr: |
   ## Collaboration et impact
 
   ### Partenariat académique
-  - **Collaboration directe** : Travail étroit avec chercheur Mila
+  - **Collaboration directe** : Travail étroit avec chercheur Mila - Institut québécois d'intelligence artificielle
   - **Transfert de connaissances** : Partage d'expertise en curation de données
   - **Support méthodologique** : Assistance pour conception d'expériences
   - **Livraison orientée recherche** : Produits adaptés aux besoins de recherche spécifiques
@@ -144,7 +144,7 @@ contentFr: |
 
   ## Collaboration
 
-  Ce projet représente une collaboration réussie entre recherche académique (Mila) et développement logiciel pratique, démontrant l'importance de la préparation de données de haute qualité dans la recherche en IA.
+  Ce projet représente une collaboration réussie entre recherche académique (Mila - Institut québécois d'intelligence artificielle) et développement logiciel pratique, démontrant l'importance de la préparation de données de haute qualité dans la recherche en IA.
 
   Ce projet illustre l'intersection critique entre l'ingénierie de données et la recherche en intelligence artificielle, montrant comment une préparation rigoureuse des données permet des évaluations significatives des capacités des grands modèles de langage dans des applications académiques réelles.
 ---
@@ -155,7 +155,7 @@ A research collaboration project focused on preparing high-quality datasets to e
 
 ## Project Context
 
-This project was developed in collaboration with a Mila-affiliated M.Sc. student to support research on using Large Language Models in the screening phase of systematic reviews - a critical step in academic research methodology.
+This project was developed in collaboration with a Mila - Quebec Artificial Intelligence Institute affiliated M.Sc. student to support research on using Large Language Models in the screening phase of systematic reviews - a critical step in academic research methodology.
 
 ## Project Objectives
 
@@ -179,7 +179,7 @@ This project was developed in collaboration with a Mila-affiliated M.Sc. student
 - **Schema Validation**: Ensuring compliance with research standards
 
 ### Research Integration
-- **Mila Collaboration**: Direct support for ongoing M.Sc. research
+- **Mila - Quebec Artificial Intelligence Institute Collaboration**: Direct support for ongoing M.Sc. research
 - **LLM Evaluation**: Datasets specifically designed for model assessment
 - **Systematic Review Context**: Understanding of domain-specific requirements
 
@@ -204,7 +204,7 @@ This project was developed in collaboration with a Mila-affiliated M.Sc. student
 
 ## Collaboration
 
-This project represents a successful collaboration between academic research (Mila) and practical software development, demonstrating the importance of high-quality data preparation in AI research.
+This project represents a successful collaboration between academic research (Mila - Quebec Artificial Intelligence Institute) and practical software development, demonstrating the importance of high-quality data preparation in AI research.
 
 ## Future Research Directions
 
