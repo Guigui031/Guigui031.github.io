@@ -1,7 +1,7 @@
 ---
 title: "Automatic Detection of Incoming Cars in a Parking Lot"
 description: "Physical Arduino system with an ultrasonic sensor that sends mobile notifications using Telegram when a car passes by. The operational system will be deployed next summer at the Aux Volets Noirs vineyard."
-pubDate: 2023-05-01
+pubDate: 2024-08-01
 heroImage: "/AuxVoletsNoirs_entree.png"
 badge: ""
 tags: []

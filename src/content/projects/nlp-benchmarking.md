@@ -1,7 +1,7 @@
 ---
 title: "Benchmarking NLP Model Performances"
 description: "This project evaluates and compares various text classification systems capable of identifying paraphrases between sentences, testing the robustness of the models on the QQP and MRPC datasets from the GLUE corpus. Furthermore, the project explores whether biased training can lead to biased performance and experiments with different encoders to identify the most performant and generalizable ones."
-pubDate: 2023-04-01
+pubDate: 2024-05-01
 heroImage: "/NLP_Benchmark.png"
 badge: ""
 tags: []

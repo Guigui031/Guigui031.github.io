@@ -1,7 +1,7 @@
 ---
 title: "Metadata curation to evaluate the use of LLMs in the context of a systematic review"
 description: "This project is about collecting metadata from articles in systematic reviews to create clean datasets. The developped program performs automatic data cleaning, definition, and alignment for all these articles. The datasets are used by a Mila - Quebec Artificial Intelligence Institute affiliated M.Sc. student to evaluate the use of LLMs in the screening phase of systematic review."
-pubDate: 2023-06-01
+pubDate: 2025-07-01
 heroImage: "/ProjetCurationMetadonnees.png"
 badge: ""
 tags: []

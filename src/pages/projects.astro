@@ -8,8 +8,11 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 const projects = await getCollection('projects');
-const mlProjects = projects.filter(project => project.data.category === 'machine-learning');
-const otherProjects = projects.filter(project => project.data.category !== 'machine-learning');
+const sortedProjects = projects.sort((a, b) => 
+  new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
+);
+const mlProjects = sortedProjects.filter(project => project.data.category === 'machine-learning');
+const otherProjects = sortedProjects.filter(project => project.data.category !== 'machine-learning');
 ---
 
 <BaseLayout title={t('projects.title')} sideBarActiveItemID={t('nav.projects')}>
@@ -23,7 +26,8 @@ const otherProjects = projects.filter(project => project.data.category !== 'mach
         title={lang === 'fr' && project.data.titleFr ? project.data.titleFr : project.data.title}
         img={project.data.heroImage}
         desc={lang === 'fr' && project.data.descriptionFr ? project.data.descriptionFr : project.data.description}
-        url={localizeUrl(`/projects/${project.slug}`, lang)}
+        // url={localizeUrl(`/projects/${project.slug}`, lang)}
+        url={project.data.githubUrl}
         badge={lang === 'fr' && project.data.badgeFr ? project.data.badgeFr : project.data.badge}
         tags={project.data.tags}
       />
@@ -41,7 +45,8 @@ const otherProjects = projects.filter(project => project.data.category !== 'mach
         title={lang === 'fr' && project.data.titleFr ? project.data.titleFr : project.data.title}
         img={project.data.heroImage}
         desc={lang === 'fr' && project.data.descriptionFr ? project.data.descriptionFr : project.data.description}
-        url={localizeUrl(`/projects/${project.slug}`, lang)}
+        // url={localizeUrl(`/projects/${project.slug}`, lang)}
+        url={project.data.githubUrl}
         badge={lang === 'fr' && project.data.badgeFr ? project.data.badgeFr : project.data.badge}
         tags={project.data.tags}
       />

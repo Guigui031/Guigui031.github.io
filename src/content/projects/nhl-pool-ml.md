@@ -1,7 +1,7 @@
 ---
 title: "Machine Learning for the Best NHL Pool"
 description: "The project involved extracting and preprocessing NHL player data using their API, predicting current season points with machine learning models, and building the optimal team using a Branch-and-Bound algorithm."
-pubDate: 2023-01-01
+pubDate: 2024-10-01
 heroImage: "/NHL_pool.png"
 badge: ""
 tags: []
