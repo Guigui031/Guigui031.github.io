@@ -1,14 +1,14 @@
 ---
-title: "Kaggle Competition on Text Classification"
-description: "Not knowing the context and only having a Bag-of-Words matrix, we needed to predict the binary labels of new documents. We developped a small architecture to organize our submissions and our best model was an Ensemble Learning Classifier using a Naïve Bayes Classifier, an XGBoost Classifier and a SVM Classifier."
-pubDate: 2022-12-01
-heroImage: "/KaggleCompetition.svg"
+title: "Data Augmentation for Cell Segmentation"
+description: "Developed smart cropping and GAN-based synthetic data generation strategies, implemented modality-aware augmentations to address multi-modality cell image variability, and integrated these methods into a U-Net architecture for weakly supervised cell segmentation. Built a complete training pipeline with an initial 21-epoch experimental validation, establishing a foundation for extended training and evaluation of segmentation improvements."
+pubDate: 2025-05-01
+heroImage: "/cell-segmentation.png"
 badge: ""
 tags: []
-githubUrl: "https://github.com/KamenDamov/kaggle_competition"
+githubUrl: "https://github.com/KamenDamov/IFT3710-Advanced-Project-in-ML-AI"
 category: "machine-learning"
-titleFr: "Compétition Kaggle sur la classification de textes"
-descriptionFr: "Ne connaissant pas le contexte et n'ayant qu'une matrice Bag-of-Words, nous devions prédire les étiquettes binaires de nouveaux documents. Nous avons développé une petite architecture pour organiser nos soumissions et notre meilleur modèle était un classificateur d'apprentissage d'ensemble utilisant un classificateur Naïve Bayes, un classificateur XGBoost et un classificateur SVM."
+titleFr: "Augmentation de données pour la segmentation de cellules"
+descriptionFr: "Développé des stratégies de recadrage intelligent et de génération de données synthétiques basées sur des GAN, mis en œuvre des augmentations adaptées aux modalités pour traiter la variabilité des images cellulaires multimodales, et intégré ces méthodes dans une architecture U-Net pour la segmentation cellulaire faiblement supervisée. Construit un pipeline d’entraînement complet avec une validation expérimentale initiale de 21 époques, établissant ainsi une base pour l’entraînement et l’évaluation approfondis des améliorations de segmentation."
 badgeFr: ""
 contentFr: |
   # Compétition Kaggle sur la classification de textes

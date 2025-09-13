@@ -1,0 +1,252 @@
+%-------------------------
+% Resume in Latex
+% Author : Guillaume Genois (based on Jake Gutierrez template)
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Guillaume Genois} \\ \vspace{1pt}
+    \small 438-378-4120 $|$ \href{mailto:guillaumegenois031@gmail.com}{\underline{guillaumegenois031@gmail.com}} $|$ 
+    \href{https://guillaume.genois.ca}{\underline{guillaume.genois.ca}} $|$
+    \href{https://github.com/Guigui031}{\underline{github.com/Guigui031}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Master's Degree in Computer Science}{2025 -- 2027}
+      {Mila - Quebec Artificial Intelligence Institute}{Montréal, QC}
+    \resumeSubheading
+      {Bachelor's Degree in Mathematics and Computer Science}{2022 -- 2025}
+      {Université de Montréal}{Montréal, QC}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Professional Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Cloud and AI Web Solutions Advisor}{Jun. 2025 -- Present}
+      {Voyages en direct}{Montréal, QC}
+      \resumeItemListStart
+        \resumeItem{Deployed 80+ websites using Azure cloud infrastructure with Front Door, CDN, and Application Gateway}
+        \resumeItem{Implemented Kubernetes containerization and WordPress Multisite CMS for scalable solutions}
+        \resumeItem{Conducted proof-of-concept development for social media API integrations}
+        \resumeItem{Identified system bugs and coordinated resolution with external development partners}
+        \resumeItem{Led technical review of AI-powered virtual assistant project for client interactions}
+        \resumeItem{Evaluated chatbot capabilities for personalized offers and agent handoff processes}
+        \resumeItem{Enhanced team productivity through Jira and Confluence workflow implementation}
+        \resumeItem{Established comprehensive QA processes for efficient bug tracking and resolution}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Data Engineering Advisor}{May 2024 -- Apr. 2025}
+      {Desjardins}{Montréal, QC}
+      \resumeItemListStart
+        \resumeItem{Developed Python parser to extract field usage and sources from SQL and SAS queries}
+        \resumeItem{Automated impact analyses and data traceability processes for improved efficiency}
+        \resumeItem{Contributed to multidimensional model development using CI/CD practices}
+        \resumeItem{Implemented solutions with Azure DevOps and SQL Server integration}
+        \resumeItem{Worked in Agile methodology within large organizational structure}
+        \resumeItem{Maintained rigorous development standards and comprehensive documentation}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {System Pilot}{May 2023 -- Apr. 2024}
+      {Office québécois de la langue française}{Montréal, QC}
+      \resumeItemListStart
+        \resumeItem{Extracted and analyzed data using SQL programming for accountability reports}
+        \resumeItem{Responded to internal and media requests with data-driven insights}
+        \resumeItem{Independently handled recurring and special development mandates}
+        \resumeItem{Quickly learned Microsoft Access, Power BI, and internal organizational tools}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Metadata Curation to Evaluate the Use of LLMs in SLRs} $|$ \emph{Python, HTML Parsing, Data Curation}}{Summer 2025}
+          \resumeItemListStart
+            \resumeItem{Built automated application to extract scientific articles from 8 major academic databases}
+            \resumeItem{Developed custom HTML parser to systematically extract metadata from research publications}
+            \resumeItem{Curated and structured metadata into 16 usable datasets comprising over 30,000 articles}
+            \resumeItem{Designed datasets specifically for LLM evaluation research on systematic literature review acceleration}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Data Augmentation for Cell Segmentation using GANs} $|$ \emph{Python, TensorFlow, U-Net, GANs}}{Winter 2025}
+          \resumeItemListStart
+            \resumeItem{Developed smart cropping and GAN-based synthetic data generation strategies}
+            \resumeItem{Implemented modality-aware augmentations to address multi-modality cell image variability}
+            \resumeItem{Integrated augmentation methods on U-Net architecture for weakly supervised cell segmentation}
+            \resumeItem{Built complete training pipeline with initial 21-epoch experimental validation}
+            \resumeItem{Established foundation for extended training and evaluation of segmentation improvements}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Machine Learning for the Best NHL Pool} $|$ \emph{Python, Machine Learning, Optimization}}{Fall 2024}
+          \resumeItemListStart
+            \resumeItem{Extracted and preprocessed NHL player data using their API through custom pipeline}
+            \resumeItem{Predicted current season points using machine learning models}
+            \resumeItem{Built optimal team using Branch-and-Bound algorithm respecting pool constraints}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Automatic Detection of Incoming Cars in a Parking Lot} $|$ \emph{Arduino, C++, IoT, Telegram API}}{Summer 2024}
+          \resumeItemListStart
+            \resumeItem{Built physical Arduino system with radar sensor, SD card logging, and radio transmission}
+            \resumeItem{Implemented mobile notifications using Telegram API when cars detected}
+            \resumeItem{Deployed operational system in real environment at Aux Volets Noirs vineyard}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+%-----------AWARDS AND DISTINCTIONS-----------
+\section{Awards and Distinctions}
+    \resumeSubHeadingListStart
+      \resumeSubheading
+          {Awarded but declined BRPC from RECI Fund - Equivalent to NSERC USRA}{2024}
+          {Université de Montréal}{\$6,250}
+      \resumeSubheading
+          {DIRO Excellence Scholarship}{2023}
+          {Université de Montréal}{\$2,500}
+      \resumeSubheading
+          {Excellence in Sciences Scholarship}{2023}
+          {Ministère de l'Enseignement supérieur}{\$1,000}
+    \resumeSubHeadingListEnd
+
+
+%-----------SOCIAL INVOLVEMENT-----------
+\section{Social Involvement}
+    \resumeSubHeadingListStart
+      \resumeSubheading
+          {Non-Profit Organization's Website Maintenance and Modernization}{2023 -- Present}
+          {Club des personnes handicapées du Lac St-Louis}{Lachine, QC}
+      \resumeSubheading
+          {Volunteer for Harvest and Other Activities}{2015 -- Present}
+          {Vignoble Aux Volets Noirs}{Très-Saint-Sacrement, QC}
+      \resumeSubheading
+          {Volunteer for Carlisopen Golf Tournament supporting Fondation En Coeur}{2023 -- 2024}
+          {Lac-St-Joseph Golf Club}{Québec, QC}
+    \resumeSubHeadingListEnd
+
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, Java, C, C++, C\#, SQL, JavaScript, R, SAS, Bash, PHP} \\
+     \textbf{Frameworks}{: TensorFlow, PyTorch, Node.js, WordPress, FastAPI, Flask} \\
+     \textbf{Tools}{: Git, Docker, Google Cloud Platform, Anaconda, Azure, DevOps, Kubernetes, WordPress} \\
+     \textbf{Libraries}{: Pandas, NumPy, Scikit-learn, TensorFlow, PyTorch, NLTK}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
