@@ -53,4 +53,9 @@ const otherProjects = sortedProjects.filter(project => project.data.category !==
       <div class="divider my-0"></div>
     </>
   ))}
+
+  <div class="mt-8">
+    <a class="btn btn-outline" href={localizeUrl('/cv', lang)}>{t('home.viewCV')}</a>
+  </div>
+  
 </BaseLayout>

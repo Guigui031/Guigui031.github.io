@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import TimeLineElement from "../../components/cv/TimeLine.astro";
-import { useTranslations } from "../../i18n/utils";
+import { useTranslations, localizeUrl } from "../../i18n/utils";
 
 // Force French locale
 const lang = 'fr';
@@ -103,5 +103,9 @@ const t = useTranslations(lang);
     <li>node.js</li>
     <li>PyTorch</li>
   </ul>
+
+  <div class="mt-8">
+    <a class="btn btn-outline ml-5" href={localizeUrl('/projects', lang)}>{t('home.exploreProjects')}</a>
+  </div>
 
 </BaseLayout>
