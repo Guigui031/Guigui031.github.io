@@ -4,7 +4,8 @@ description: "An intelligent conversational assistant for Celebrity Cruises info
 pubDate: 2025-10-10
 heroImage: "/cruise-rag-assistant.png"
 badge: ""
-githubUrl: "https://github.com/yourusername/AIAssistantWithRAG"
+# githubUrl: "https://github.com/Guigui031/AIAssistantWithRAG"
+githubUrl: "https://rag.guillaume.genois.ca/"
 category: "machine-learning"
 titleFr: "Assistant RAG pour Celebrity Cruises"
 descriptionFr: "Un assistant conversationnel intelligent pour les informations sur Celebrity Cruises, alimenté par la génération augmentée par récupération (RAG). Ce système combine des requêtes de base de données SQL avec la récupération de magasin vectoriel pour répondre aux questions sur la disponibilité des croisières, les prix, les horaires et les informations générales sur les croisières en utilisant LangGraph et LangChain."
