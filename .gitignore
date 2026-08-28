@@ -17,6 +17,9 @@ pnpm-debug.log*
 .env
 .env.production
 
+# deploy target (server address, paths) - keep out of this public repo
+deploy.config.json
+
 # macOS-specific files
 .DS_Store
 

@@ -1,0 +1,8 @@
+{
+  "SshUser": "root",
+  "SshHost": "your.server.ip",
+  "SshKey": "~/.ssh/your_key",
+  "RemotePath": "/home/site-user/htdocs/example.com",
+  "RemoteOwner": "site-user:site-user",
+  "SiteUrl": "https://example.com/"
+}
